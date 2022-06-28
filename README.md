@@ -11,3 +11,7 @@
 [GitHub Repo](https://github.com/bradydavenport/caps)
 
 ### Setup
+
+### UML
+
+![caps](/public/img/caps.jpg)
