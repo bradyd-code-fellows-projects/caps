@@ -1,8 +1,8 @@
 'use strict';
 
 const eventPool = require('./hub');
-const { soldHandler, deliveredHandler } = require('./apps/vendor');
-const { shippedHandler, deliverPackage } = require('./apps/driver');
+const { soldHandler, deliveredHandler } = require('./apps/vendor/vendor');
+const { shippedHandler, deliverPackage } = require('./apps/driver/driver');
 
 const product = require('./chance');
 
