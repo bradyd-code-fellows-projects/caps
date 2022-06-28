@@ -12,9 +12,7 @@ let product = {
   },
 };
 
-let randTime = chance.date();
-
 module.exports = {
   product,
-  randTime,
+  chance,
 };

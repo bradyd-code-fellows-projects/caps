@@ -1,21 +1,38 @@
 'use strict';
 
 const eventPool = require('../hub');
-const { product, randTime } = require('../chance');
+const { product, chance} = require('../chance');
 
 const soldHandler = (payload) => {
-  console.log('Message sent: product sold, package ready for pickup');
   eventPool.emit('READY_FOR_PICKUP', {
     EVENT: {
       event: 'pickup',
-      time: randTime,
+      time: chance.date(),
       payload: product.payload,
     },
   });
+  console.log(` 
+  EVENT { event: 'pickup',
+    time: ${chance.date()},
+    payload: 
+      { store: ${product.payload.store},
+        orderID: ${product.payload.orderID},
+        customer: ${product.payload.customer},
+        address: ${product.payload.address} }
+  }`);
 };
 
-const deliveredHandler = () => {
+const deliveredHandler = (payload) => {
   console.log(`Thank you for delivering order ${product.payload.orderID}`);
+  console.log(`
+  EVENT { event: 'delivered',
+    time: ${chance.date()},
+    payload:
+      { store: ${product.payload.store},
+      orderID: ${product.payload.orderID},
+      customer: ${product.payload.customer},
+      address: ${product.payload.address} }
+    }`);
 };
 
 module.exports = {
