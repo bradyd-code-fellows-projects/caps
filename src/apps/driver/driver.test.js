@@ -24,7 +24,7 @@ describe('Driver Tests', () => {
         payload: product.payload,
       },
     });
-    expect(console.log).toHaveBeenCalledWith(`DRIVER: picked up ${product.payload.orderID}`);
+    expect(console.log).toHaveBeenCalledWith(`DRIVER: picked up ${product.payload.orderId}`);
   });
 
   test.todo('Deliver package should emit package delivered event');

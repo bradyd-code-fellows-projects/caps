@@ -11,13 +11,13 @@ function shippedHandler(payload) {
       payload: product.payload,
     },
   });
-  console.log(`DRIVER: picked up ${product.payload.orderID}`);
+  console.log(`DRIVER: picked up ${product.payload.orderId}`);
   console.log(` 
   EVENT { event: 'in-transit',
     time: ${chance.date()},
     payload: 
       { store: ${product.payload.store},
-        orderID: ${product.payload.orderID},
+        orderId: ${product.payload.orderId},
         customer: ${product.payload.customer},
         address: ${product.payload.address} }
   }`);
@@ -25,7 +25,7 @@ function shippedHandler(payload) {
 
 function deliverPackage() {
   setTimeout(() => {
-    console.log(`DRIVER: delivered ${product.payload.orderID}`);
+    console.log(`DRIVER: delivered ${product.payload.orderId}`);
     eventPool.emit('PACKAGE_DELIVERED', {
       EVENT: {
         event: 'delivered',

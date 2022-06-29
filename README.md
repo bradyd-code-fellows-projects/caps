@@ -1,6 +1,9 @@
-# LAB - Class 11
+# LAB - Class 11, 12
 
-## Project: CAPS Phase 1
+## Project: CAPS
+
+* Phase 1 - Event pool
+* Phase 2 - socket.io
 
 ### Author: Brady Davenport
 
