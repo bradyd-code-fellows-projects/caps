@@ -1,10 +1,9 @@
-# LAB - Class 11, 12, 13
+# LAB - Class 11, 12
 
 ## Project: CAPS
 
 * Phase 1 - Event pool
 * Phase 2 - socket.io
-* Phase 3 - queue
 
 ### Author: Brady Davenport
 
